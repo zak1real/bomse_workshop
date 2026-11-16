@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Bomse Workshop — тату и парикмахерская в лифтовой шахте Нижполиграфа</title>
+    <meta name="description" content="Bomse Workshop: тату, парикмахерская и мастерская на четырёх этажах старой лифтовой шахты Нижполиграфа. Нижний Новгород, Варварская, 32.">
+    <meta name="theme-color" content="#0f0d0c">
+    <meta property="og:title" content="Bomse Workshop — четыре этажа в лифтовой шахте">
+    <meta property="og:description" content="Тату, парикмахерская и мастерская в старой лифтовой шахте Нижполиграфа. Нижний Новгород, Варварская, 32.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f0d0c'/%3E%3Cpath d='M9 6h9a5 5 0 0 1 3 9 5.500 5.500 0 0 1-2.500 11H9zm4 4v4h4a2 2 0 0 0 0-4zm0 8v4h5a2 2 0 0 0 0-4z' fill='%23e2572f'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Onest:wght@400;500;600&family=Sofia+Sans+Extra+Condensed:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip" href="#floor-1">К содержанию</a>
+
+    <div class="stage" aria-hidden="true">
+        <canvas id="shaft"></canvas>
+        <div class="stage__fallback"></div>
+    </div>
+
+    <header class="top">
+        <a class="top__logo" href="#top" aria-label="Bomse Workshop — наверх страницы">BOMSE<span>workshop</span></a>
+        <a class="btn btn--small" href="#roof">Записаться</a>
+    </header>
+
+    <!-- Лифтовая панель: указатель этажа и кнопки -->
+    <nav class="lift" aria-label="Этажи">
+        <div class="lift__dial" aria-hidden="true">
+            <svg viewBox="0 0 120 70">
+                <path class="lift__arc" d="M12 60 A48 48 0 0 1 108 60" />
+                <g class="lift__ticks">
+                    <text x="14" y="52">1</text>
+                    <text x="35" y="24">2</text>
+                    <text x="60" y="13">3</text>
+                    <text x="85" y="24">4</text>
+                    <text x="106" y="52">К</text>
+                </g>
+                <line class="lift__needle" x1="60" y1="60" x2="60" y2="20" />
+                <circle class="lift__hub" cx="60" cy="60" r="4.500" />
+            </svg>
+        </div>
+        <ol class="lift__buttons">
+            <li><a href="#roof" data-stop="5"><b>К</b><span>Крыша — запись</span></a></li>
+            <li><a href="#floor-4" data-stop="4"><b>4</b><span>Мастерская</span></a></li>
+            <li><a href="#floor-3" data-stop="3"><b>3</b><span>Тату</span></a></li>
+            <li><a href="#floor-2" data-stop="2"><b>2</b><span>Парикмахерская</span></a></li>
+            <li><a href="#floor-1" data-stop="1"><b>1</b><span>Вход</span></a></li>
+        </ol>
+    </nav>
+
+    <main id="top">
+        <section class="hero" data-stop="0">
+            <p class="tag">Нижний Новгород · Варварская, 32 · Нижполиграф</p>
+            <h1 class="hero__title">
+                <span>Bomse</span>
+                <span>Workshop</span>
+            </h1>
+            <p class="hero__lead">Тату, парикмахерская и мастерская в&nbsp;старой лифтовой шахте. Комнаты здесь идут не&nbsp;друг за&nbsp;другом, а&nbsp;снизу вверх — четыре этажа, по&nbsp;одной на&nbsp;каждом.</p>
+            <div class="hero__actions">
+                <a class="btn" href="#roof">Записаться</a>
+                <a class="link-arrow" href="#floor-1">Подняться по этажам</a>
+            </div>
+            <p class="hero__hint" aria-hidden="true"><i></i>Листайте — лифт поедет вверх</p>
+        </section>
+
+        <section class="floor" id="floor-1" data-stop="1">
+            <header class="floor__head">
+                <span class="floor__num" aria-hidden="true">1</span>
+                <div>
+                    <p class="tag">Первый этаж</p>
+                    <h2>Вход в шахту</h2>
+                </div>
+            </header>
+            <div class="floor__body">
+                <p class="lead">Лифт отсюда давно уехал. Осталась кирпичная шахта в&nbsp;четыре этажа — мы заняли её целиком.</p>
+                <p>Обычная студия растёт в&nbsp;ширину: зал, коридор, ещё зал. У&nbsp;нас так не&nbsp;получится — стены не&nbsp;пускают. Поэтому каждая комната занимает свой этаж, а&nbsp;между ними лестница вместо кабины. Зашёл внизу, поднялся — и&nbsp;ты уже в&nbsp;другом месте.</p>
+
+                <dl class="facts">
+                    <div><dt>1905</dt><dd>Год постройки здания. Краснокирпичный модерн архитектора Павла Домбровского — сначала Дом трудолюбия, потом типография «Нижполиграф».</dd></div>
+                    <div><dt>4</dt><dd>Этажа в&nbsp;шахте. На&nbsp;каждом одна комната и&nbsp;одно дело.</dd></div>
+                    <div><dt>0</dt><dd>Лифтов. Наверх — пешком, зато по&nbsp;пути видно всё.</dd></div>
+                </dl>
+
+                <h3>Кто такие Bomse</h3>
+                <p>Bomse — нижегородская команда уличных художников. Начинали с&nbsp;граффити на&nbsp;улицах города, потом были выставки, холсты и&nbsp;мерч. Татуировка всё это время шла рядом. Мастерская в&nbsp;шахте — место, где это наконец собралось под одной крышей.</p>
+            </div>
+        </section>
+
+        <section class="floor" id="floor-2" data-stop="2">
+            <header class="floor__head">
+                <span class="floor__num" aria-hidden="true">2</span>
+                <div>
+                    <p class="tag">Второй этаж</p>
+                    <h2>Парикмахерская</h2>
+                </div>
+            </header>
+            <div class="floor__body">
+                <p class="lead">Кресло, зеркало, кирпич вместо обоев. Стрижём без конвейера: один мастер, один человек, одна комната.</p>
+                <ul class="price" data-list="barber"></ul>
+                <p class="note">В&nbsp;шахте тесно — в&nbsp;хорошем смысле. Очереди за&nbsp;спиной не&nbsp;будет, поэтому записывайтесь заранее.</p>
+            </div>
+        </section>
+
+        <section class="floor" id="floor-3" data-stop="3">
+            <header class="floor__head">
+                <span class="floor__num" aria-hidden="true">3</span>
+                <div>
+                    <p class="tag">Третий этаж</p>
+                    <h2>Тату</h2>
+                </div>
+            </header>
+            <div class="floor__body">
+                <p class="lead">Рука, набитая на&nbsp;стенах и&nbsp;холстах. Работаем по&nbsp;авторским эскизам — чужие картинки из&nbsp;интернета не&nbsp;копируем.</p>
+                <ul class="price" data-list="tattoo"></ul>
+
+                <h3>Как проходит</h3>
+                <ol class="steps">
+                    <li><b>Идея.</b> Пишете в&nbsp;директ: что хотите, где и&nbsp;какого размера. Можно с&nbsp;референсами.</li>
+                    <li><b>Эскиз.</b> Рисуем под вас и&nbsp;согласовываем до&nbsp;сеанса.</li>
+                    <li><b>Сеанс.</b> Третий этаж, кушетка, одноразовые расходники.</li>
+                    <li><b>Заживление.</b> Выдаём памятку и&nbsp;остаёмся на&nbsp;связи, пока не&nbsp;заживёт.</li>
+                </ol>
+
+                <h3>Работы</h3>
+                <ul class="works" data-works></ul>
+                <p class="note">Свежие работы — в&nbsp;<a data-ig-link href="https://www.instagram.com/bomse.workshop/" target="_blank" rel="noopener">Instagram @bomse.workshop</a>.</p>
+            </div>
+        </section>
+
+        <section class="floor" id="floor-4" data-stop="4">
+            <header class="floor__head">
+                <span class="floor__num" aria-hidden="true">4</span>
+                <div>
+                    <p class="tag">Четвёртый этаж</p>
+                    <h2>Мастерская</h2>
+                </div>
+            </header>
+            <div class="floor__body">
+                <p class="lead">Под самой крышей — краска, трафареты и&nbsp;печатный стол. Здесь появляется всё, что потом висит на&nbsp;стенах и&nbsp;надевается на&nbsp;людей.</p>
+                <ul class="price" data-list="workshop"></ul>
+                <p class="note">Типография в&nbsp;этом здании проработала почти век. Мы просто продолжаем печатать — меньшим тиражом и&nbsp;по-своему.</p>
+            </div>
+        </section>
+
+        <section class="floor floor--roof" id="roof" data-stop="5">
+            <header class="floor__head">
+                <span class="floor__num" aria-hidden="true">К</span>
+                <div>
+                    <p class="tag">Крыша</p>
+                    <h2>Запись</h2>
+                </div>
+            </header>
+            <div class="floor__body">
+                <p class="lead">Выше только лебёдка. Напишите, на&nbsp;какой этаж вам нужно — ответим и&nbsp;подберём время.</p>
+
+                <form class="form" data-form novalidate>
+                    <fieldset class="form__floors">
+                        <legend>Куда</legend>
+                        <label><input type="radio" name="service" value="Парикмахерская" checked><span>Парикмахерская</span></label>
+                        <label><input type="radio" name="service" value="Тату"><span>Тату</span></label>
+                        <label><input type="radio" name="service" value="Мастерская"><span>Мастерская</span></label>
+                    </fieldset>
+                    <div class="form__row">
+                        <label class="field">
+                            <span>Имя</span>
+                            <input type="text" name="name" autocomplete="given-name" required>
+                        </label>
+                        <label class="field">
+                            <span>Телефон или ник</span>
+                            <input type="text" name="contact" autocomplete="tel" required>
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span>Что хотите сделать</span>
+                        <textarea name="message" rows="3" placeholder="Например: стрижка в субботу после обеда"></textarea>
+                    </label>
+                    <div class="form__foot">
+                        <button class="btn" type="submit">Отправить заявку</button>
+                        <p class="form__status" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
+
+                <dl class="contacts" data-contacts></dl>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p>Bomse Workshop · <span data-address></span></p>
+        <a href="#top">Вниз, на первый ↓</a>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="vendor/three.min.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
